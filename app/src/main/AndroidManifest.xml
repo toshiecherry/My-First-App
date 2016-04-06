@@ -18,6 +18,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".DisplayMessageActivity"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName=".MyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.elinsakurai.myfirstapp.MyActivity" />
+        </activity>
+        <activity
+            android:name=".DisplayCompassActivity"
+            android:label="@string/title_activity_display_compass"
+            android:parentActivityName=".MyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.elinsakurai.myfirstapp.MyActivity" />
+        </activity>
+        <activity
+            android:name=".DisplayAccelerometerActivity"
+            android:label="@string/title_activity_display_accelerometer"
+            android:parentActivityName=".MyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.elinsakurai.myfirstapp.MyActivity" />
+        </activity>
     </application>
 
 </manifest>

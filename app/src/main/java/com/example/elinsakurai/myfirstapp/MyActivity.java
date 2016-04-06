@@ -8,8 +8,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.content.Intent;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 public class MyActivity extends AppCompatActivity {
+    public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,5 +52,28 @@ public class MyActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /** Called when the user clicks the Send button */
+    public void sendMessage(View view) {
+
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        EditText editText = (EditText) findViewById(R.id.edit_message);
+        String message = editText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
+
+    /** Called when the user clicks the Compass button */
+    public void showCompass(View view){
+        Intent intent = new Intent(this, DisplayCompassActivity.class);
+        startActivity(intent);
+    }
+
+    /** Called when the user clicks the Speed button */
+    public void showSpeed (View view){
+        Intent intent = new Intent(this, DisplayAccelerometerActivity.class);
+        startActivity(intent);
+
     }
 }
